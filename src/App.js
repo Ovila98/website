@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './styles/App.css';
 
 import { Home, Spaces, About, Blog, Pricing, NoView} from './views';
-import { Nav } from './components';
+import { Footer, Nav } from './components';
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
           <Route exact path="/prestations" element={<Pricing />} />
           <Route exact path="*" element={<NoView />} />
         </Routes>
+        <Footer />
       </main>
       
     </Router>

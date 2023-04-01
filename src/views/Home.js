@@ -1,10 +1,17 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 
 import { Section, Bubble } from '../components'
 import ArrowDown from "../res/arrow-down.svg"
 import MSP from "../res/Matterport-Service-Partner-Logo.png"
 
 export default function Home() {
+
+    useEffect(() => {
+        document.querySelector("main").classList.toggle("bg-grad", true);
+
+        return () => {document.querySelector("main").classList.toggle("bg-grad", false);}
+    }, [])
+
   return (
     <>
         <div id="fixed-bg" />
@@ -19,15 +26,15 @@ export default function Home() {
             </div>
             <div id="hero-presenter">
                 <span className="ff-jkt fw-700 p-fg">Réalisez les meilleures visites virtuelles de la région Grenobloise !</span>
-                <img id="present-btn" src={ArrowDown} alt="&#8595;" onClick={() => {document.getElementById("vitrine-container").scrollIntoView()}}></img>
+                <img id="present-btn" src={ArrowDown} alt="&#8595;" onClick={() => {document.getElementById("vitrine-section").scrollIntoView()}}></img>
             </div>
         </Section>
         <Section id="vitrine-section">
             <div id="vitrine-container">
                     <div id="leitmotiv"><span className='p-fg fw-700 ff-jkt'>DÉTAIL.</span><span className='p-fg fw-700 ff-jkt'>FLUIDITÉ.</span><span className='p-fg fw-700 ff-jkt'>QUALITÉ.</span></div>
                     <div className="fw-500 ff-jkt">Notre leitmotiv, voyez ci-dessous!</div>
-                    <div id="vitrine">
-                        <iframe title="frame" src='https://my.matterport.com/show/?m=43MsG2EBfrh' frameborder='0' allowfullscreen allow='xr-spatial-tracking'></iframe>
+                    <div className="vitrine">
+                        <iframe title="frame" src='https://my.matterport.com/show/?m=43MsG2EBfrh' frameBorder='0' allowFullScreen></iframe>
                     </div>
             </div>
             <div id="advantages-container">
@@ -65,32 +72,6 @@ export default function Home() {
                 </div>
             </div>
         </Section>
-        <footer>
-        <div class="footer-container">
-            <div class="row">
-                <div class="col">
-                    <h3 className="h3">VirtuaView</h3>
-                    <p className="p">Réalisation de visites virtuelles</p>
-                </div>
-                <div class="col">
-                    <h3 className="h3">Coordonnées</h3>
-                    <p className="p">Adresse: 123 Rue des Visites Virtuelles</p>
-                    <p className="p">Téléphone: (123) 456-7890</p>
-                    <p className="p">Email: contact@virtuaview.com</p>
-                </div>
-                <div class="col">
-                    <h3 className="h3">Liens utiles</h3>
-                    <ul className="ul">
-                    <li className="li"><a className="a" href="#">Accueil</a></li>
-                    <li className="li"><a className="a" href="#">À propos</a></li>
-                    <li className="li"><a className="a" href="#">Services</a></li>
-                    <li className="li"><a className="a" href="#">Portfolio</a></li>
-                    <li className="li"><a className="a" href="#">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        </footer>
     </>
   )
 }
