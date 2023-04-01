@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/website/static/css/main.66ba547d.css",
-    "main.js": "/website/static/js/main.c36fda95.js",
+    "main.js": "/website/static/js/main.8e6babd5.js",
     "static/media/ovila.jpg": "/website/static/media/ovila.4bb7c8362d035e40b401.jpg",
     "static/media/zak.jpg": "/website/static/media/zak.fc7010189a85c2b255e4.jpg",
     "static/media/grenoble.jpg": "/website/static/media/grenoble.dd7a584eef91f0135f95.jpg",
@@ -10,10 +10,10 @@
     "static/media/arrow-down.svg": "/website/static/media/arrow-down.475e5050c0a899b33aba31cf862e09c2.svg",
     "index.html": "/website/index.html",
     "main.66ba547d.css.map": "/website/static/css/main.66ba547d.css.map",
-    "main.c36fda95.js.map": "/website/static/js/main.c36fda95.js.map"
+    "main.8e6babd5.js.map": "/website/static/js/main.8e6babd5.js.map"
   },
   "entrypoints": [
     "static/css/main.66ba547d.css",
-    "static/js/main.c36fda95.js"
+    "static/js/main.8e6babd5.js"
   ]
 }
